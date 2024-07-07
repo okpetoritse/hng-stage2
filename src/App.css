@@ -60,6 +60,7 @@
 .headerNav {
   display: flex;
   align-items: center;
+  justify-content: end;
   gap: 32px;
 }
 .headerNav--avatar {
@@ -74,7 +75,6 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
-
   .headerSearch {
     grid-column: span 2;
     order: 2;
@@ -207,6 +207,10 @@
   gap: 6px;
   font-weight: 600;
   color: #aa4a41;
+}
+
+.productFilter--item:nth-of-type(3) svg {
+  display: none;
 }
 
 .productFilter--btns {
@@ -788,6 +792,10 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+  }
+
+  .productList--recently  {
+    gap: 16px;
   }
 
   .productList--recently .productCard:last-child {

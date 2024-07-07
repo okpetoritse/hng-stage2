@@ -2,14 +2,15 @@ import LogoIcon from "@/assets/icons/logo.svg?react";
 import SearchIcon from "@/assets/icons/search.svg?react";
 import FavouriteIcon from "@/assets/icons/favourite.svg?react";
 import CartIcon from "@/assets/icons/cart.svg?react";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div className="wrapper">
       <header className="header container">
-        <section className="logo">
+        <Link className="logo">
           <LogoIcon />
           <p className="logo--title">Timbu Cloud Shop</p>
-        </section>
+        </Link>
         <section className="headerSearch">
           <SearchIcon className="headerSearch--icon" />
           <input

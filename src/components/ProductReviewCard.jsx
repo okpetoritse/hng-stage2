@@ -27,6 +27,7 @@ const ProductReviewCard = ({
           <div className="productReview--images">
             {images.map((image) => (
               <img
+                key={image}
                 src={image}
                 alt="review"
                 className="productReview--image"

@@ -8,14 +8,14 @@ const CartList = () => {
       id: 1,
       name: 'Gucci Women\'s High-heeled Shoes',
       price: '234,980.00',
-      imageUrl: 'path-to-shoes-image',
+      imageUrl: 'https://picsum.photos/400/257',
       colorOptions: ['Black'],
     },
     {
       id: 2,
       name: 'Gucci Women\'s Leather Bag',
       price: '234,980.00',
-      imageUrl: 'path-to-bag-image',
+      imageUrl: 'https://picsum.photos/400/257',
       colorOptions: ['Pink', 'Black'],
     },
   ];
