@@ -1,0 +1,178 @@
+const products = [
+  {
+    id: 1,
+    title: "Gucci Women's Double G Leather heels in black",
+    tags: ["Best Sellers", "Shoe"],
+    price: 43000,
+    rating: { count: 234, average: 2.5 },
+  },
+  {
+    id: 2,
+    title: "New balance Women's Double G Leather heels in nude",
+    tags: ["Best Sellers", "Shoe"],
+    price: 85000,
+    rating: { count: 240, average: 3 },
+  },
+  {
+    id: 3,
+    title: "Gucci Women's Double G Leather flat in black",
+    tags: ["Best Sellers", "Shoe"],
+    price: 76000,
+    rating: { count: 34, average: 4 },
+  },
+  {
+    id: 4,
+    title: "Nike Men's Air Max 90 Sneakers",
+    tags: ["Best Sellers", "Shoe"],
+    price: 68600,
+    rating: { count: 234, average: 4 },
+  },
+  {
+    id: 5,
+    title: "Adidas Women's Ultraboost Running Shoes",
+    tags: ["Best Sellers", "Shoe"],
+    price: 43000,
+    rating: { count: 103, average: 4.5 },
+  },
+  {
+    id: 6,
+    title: "Puma Men's RS-X3 Puzzle Sneakers",
+    tags: ["Best Sellers", "Shoe"],
+    price: 43000,
+    rating: { count: 693, average: 3 },
+  },
+  {
+    id: 7,
+    title: "Tommy Hilfiger Men's Classic Fit Shirt",
+    tags: ["New Arrivals", "Shirt"],
+    price: 55000,
+    rating: { count: 87, average: 4.2 },
+  },
+  {
+    id: 8,
+    title: "Levi's Men's 511 Slim Fit Jeans",
+    tags: ["New Arrivals", "Pants"],
+    price: 67000,
+    rating: { count: 120, average: 3.8 },
+  },
+  {
+    id: 9,
+    title: "Ray-Ban Unisex Aviator Sunglasses",
+    tags: ["New Arrivals", "Accessories"],
+    price: 25000,
+    rating: { count: 45, average: 4.7 },
+  },
+  {
+    id: 10,
+    title: "Apple AirPods Pro",
+    tags: ["New Arrivals", "Accessories"],
+    price: 24900,
+    rating: { count: 1200, average: 4.8 },
+  },
+  {
+    id: 11,
+    title: "Samsung Galaxy S21 Ultra",
+    tags: ["New Arrivals", "Electronics"],
+    price: 119999,
+    rating: { count: 500, average: 4.5 },
+  },
+  {
+    id: 12,
+    title: "Sony PlayStation 5",
+    tags: ["New Arrivals", "Gaming"],
+    price: 49999,
+    rating: { count: 1000, average: 4.9 },
+  },
+  {
+    id: 13,
+    title: "Canon EOS R5 Mirrorless Camera",
+    tags: ["New Arrivals", "Photography"],
+    price: 389900,
+    rating: { count: 300, average: 4.7 },
+  },
+  {
+    id: 14,
+    title: "Dyson V11 Absolute Cordless Vacuum",
+    tags: ["New Arrivals", "Home Appliances"],
+    price: 69900,
+    rating: { count: 800, average: 4.6 },
+  },
+  {
+    id: 15,
+    title: "Fitbit Charge 5 Fitness Tracker",
+    tags: ["New Arrivals", "Fitness"],
+    price: 17900,
+    rating: { count: 400, average: 4.3 },
+  },
+  {
+    id: 16,
+    title: "LG OLED65C1PUB 65-inch 4K Smart OLED TV",
+    tags: ["New Arrivals", "TV"],
+    price: 249999,
+    rating: { count: 200, average: 4.8 },
+  },
+  {
+    id: 17,
+    title: "Bose QuietComfort 35 II Wireless Headphones",
+    tags: ["New Arrivals", "Audio"],
+    price: 29900,
+    rating: { count: 600, average: 4.7 },
+  },
+  {
+    id: 18,
+    title: "Nintendo Switch Console",
+    tags: ["New Arrivals", "Gaming"],
+    price: 29999,
+    rating: { count: 900, average: 4.5 },
+  },
+  {
+    id: 19,
+    title: "KitchenAid Artisan Stand Mixer",
+    tags: ["New Arrivals", "Kitchen Appliances"],
+    price: 39900,
+    rating: { count: 250, average: 4.9 },
+  },
+  {
+    id: 20,
+    title: "Dell XPS 13 Laptop",
+    tags: ["New Arrivals", "Laptops"],
+    price: 129999,
+    rating: { count: 400, average: 4.8 },
+  },
+];
+
+const reviews = [
+  {
+    id: 1,
+    description: "This is a very good product, I love it",
+    author: {
+      fullName: "John Doe",
+    },
+    createAt: "March 14 2024",
+    rating: { count: 234, average: 2.5 },
+    images: ["https://picsum.photos/50/50", "https://picsum.photos/50/50"],
+  },
+
+  {
+    id: 2,
+    description: "Great product! Highly recommended.",
+    author: {
+      fullName: "Jane Smith",
+    },
+    createAt: "April 2, 2024",
+    rating: { count: 120, average: 4.7 },
+    images: ["https://picsum.photos/50/50", "https://picsum.photos/50/50"],
+  },
+  {
+    id: 3,
+    description: "Amazing quality and fast shipping.",
+    author: {
+      fullName: "Mike Johnson",
+    },
+    createAt: "April 10, 2024",
+    rating: { count: 500, average: 4.9 },
+    images: ["https://picsum.photos/50/50", "https://picsum.photos/50/50"],
+  },
+];
+
+export { products, reviews };
