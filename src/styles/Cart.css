@@ -166,6 +166,7 @@
   font-weight: 400;
   line-height: normal;
 }
+
 .cartProducts--promo-input::placeholder {
   color: #777;
 }

@@ -5,9 +5,9 @@ import InfoSquareIcon from "@/assets/icons/info-square.svg?react";
 import "@/styles/Cart.css"; // Importing the CSS file
 import Breadcrumb from "../components/Breadcrumb";
 import { formatPrice } from "@/utils/product";
+import { Link } from "react-router-dom";
 
 const CartPage = () => {
-  // Mocked product data
   const products = [
     {
       id: 1,
@@ -90,7 +90,7 @@ const CartPage = () => {
             <p className="cartProducts--text">Total</p>
             <p className="cartProducts--price-total">{formatPrice(38000)}</p>
           </div>
-          <button className="cartProducts--checkout">Checkout</button>
+          <Link to="/checkout" className="cartProducts--checkout">Checkout</Link>
         </section>
       </div>
     </section>

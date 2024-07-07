@@ -1,0 +1,133 @@
+.checkout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.checkout--section1 {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 16px;
+}
+
+.checkout--heading {
+  color: #0f1d2d;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.checkout--formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkout--formLabel {
+  color: #0f1d2d;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.checkout--formInput {
+  border: none;
+  border-radius: 8px;
+  background: #f0f0f0;
+  padding: 16px;
+}
+
+.checkout--form-double {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.checkout--phoneGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.checkout--phone {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 16px;
+}
+
+.checkout--payment {
+  display: flex;
+  padding: 8px 12px;
+  gap: 12px;
+  color: #555;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.checkout--payment.active {
+  border-radius: 8px;
+  border: 1.5px solid #4a90e2;
+}
+
+.checkout--payment span {
+  color: #777;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.checkout--order {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  max-height: 700px;
+  padding: 5px 30px 30px 30px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0px 4px 8px 0px rgba(196, 196, 196, 0.25);
+}
+
+.checkout--orderTitle {
+  color: #333;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.cartProduct--item.checkout--orderItem {
+  padding: 24px 0;
+}
+.checkout--summary {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+@media screen and (max-width: 1024px) {
+  .checkout {
+    grid-template-columns: 1fr 1fr ;
+    padding: 10px;
+  }
+  .checkout--section1 {
+    width: 100%;
+  }
+    
+}
+
+@media screen and (max-width: 768px) {
+  .checkout {
+    grid-template-columns: 1fr;
+  }
+  .checkout--section1 {
+    width: 100%;
+  }
+}

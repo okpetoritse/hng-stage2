@@ -2,6 +2,7 @@ import ProductsPage from "@/pages/ProductsPage";
 import ProductDetailPage from "@/pages/ProductDetailPage";
 import MainLayout from "@/layouts/MainLayout";
 import CartPage from "@/pages/CartPage";
+import CheckoutPage from "../pages/CheckoutPage";
 
 const routes = [
   {
@@ -18,6 +19,10 @@ const routes = [
       {
         path: "/cart",
         element: <CartPage />,
+      },
+      {
+        path: "/checkout",
+        element: <CheckoutPage />,
       }
     ],
   },
