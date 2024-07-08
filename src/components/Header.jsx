@@ -15,7 +15,6 @@ const Header = () => {
         <NavLink
           to="/"
           className="logo"
-          activeClassName="active"
         >
           <LogoIcon />
           <p className="logo--title">Timbu Cloud Shop</p>
@@ -39,7 +38,6 @@ const Header = () => {
             <NavLink
               to="/cart"
               className="headerNav--item"
-              activeClassName="active"
             >
               <CartIcon className="headerNav--cart" />
               {cart.length > 0 ? (
