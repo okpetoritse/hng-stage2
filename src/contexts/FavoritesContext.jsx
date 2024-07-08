@@ -12,7 +12,9 @@ export const FavoritesProvider = ({ children }) => {
   const [favorites, setFavorites] = useState([]);
 
   const addFavorite = (product) => {
-    console.log("Adding favorite: ", product);
+    if (favorites.some((f) => f.id === product.id)) {
+      return;
+    }
     setFavorites([...favorites, product]);
   };
 

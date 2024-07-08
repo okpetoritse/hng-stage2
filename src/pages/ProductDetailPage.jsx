@@ -3,6 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import ProductCard from "@/components/ProductCard";
 import TagIcon from "@/assets/icons/tag.svg?react";
 import FavouriteIcon from "@/assets/icons/favourite.svg?react";
+import FavouriteFilledIcon from "@/assets/icons/favourite-filled.svg?react";
 import CartIcon from "@/assets/icons/cart.svg?react";
 import PaymentIcon from "@/assets/icons/payment-card.svg?react";
 import UserIcon from "@/assets/icons/user.svg?react";
@@ -13,11 +14,14 @@ import { formatPrice } from "@/utils/product";
 import "@/styles/ProductDetail.css";
 import { useContext, useMemo } from "react";
 import CartContext from "@/contexts/CartContext";
+import FavoritesContext from "@/contexts/FavoritesContext";
 import { useParams } from "react-router-dom";
 import { products } from "@/data/products";
 
 const ProductDetailPage = () => {
   const { cart, addToCart, removeFromCart } = useContext(CartContext);
+  const { favorites, addFavorite, removeFavorite } =
+    useContext(FavoritesContext);
 
   const { id } = useParams();
 
@@ -25,14 +29,27 @@ const ProductDetailPage = () => {
     return products.find((product) => product.id === parseInt(id));
   }, [id]);
 
+  const isFavourite = useMemo(() => {
+    return favorites.some((f) => f.id === parseInt(id));
+  }, [id, favorites]);
+
   const handleAddToCart = () => {
-    addToCart({ id: id });
+    addToCart(product);
   };
 
   const handleRemoveFromCart = () => {
-    removeFromCart(id);
+    removeFromCart(parseInt(id));
   };
 
+  const handleAddFavorite = () => {
+    addFavorite(product);
+  };
+
+  const handleRemoveFavorite = () => {
+    removeFavorite(parseInt(id));
+  };
+
+  console.log("IS Favourite", isFavourite);
   return (
     <main className="productDetailMain container">
       <Breadcrumb data={["Product List", "Female Shoe", "Product details"]} />
@@ -70,7 +87,7 @@ const ProductDetailPage = () => {
             <li className="productDetail--color"></li>
           </ul>
           <div className="productDetail--buttons">
-            {cart.some((product) => product.id === id) ? (
+            {cart.some((product) => product.id === parseInt(id)) ? (
               <button
                 className="productDetail--cart productDetail--cart-remove"
                 onClick={handleRemoveFromCart}
@@ -86,7 +103,11 @@ const ProductDetailPage = () => {
               </button>
             )}
             <button className="productDetail--favourite">
-              <FavouriteIcon />
+              {isFavourite ? (
+                <FavouriteFilledIcon onClick={handleRemoveFavorite} />
+              ) : (
+                <FavouriteIcon onClick={handleAddFavorite} />
+              )}
             </button>
           </div>
         </div>

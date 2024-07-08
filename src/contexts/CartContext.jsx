@@ -12,6 +12,9 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
+    if (cart.some((existingProduct) => existingProduct.id === product.id)) {
+      return;
+    }
     setCart([...cart, product]);
   };
 
