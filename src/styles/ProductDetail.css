@@ -112,6 +112,7 @@
 }
 
 .productDetail--cart {
+  min-width: 201px;
   padding: 14px 29px;
   background: #4a90e2;
   border: none;

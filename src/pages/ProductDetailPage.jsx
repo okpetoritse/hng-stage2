@@ -25,6 +25,10 @@ const ProductDetailPage = () => {
 
   const { id } = useParams();
 
+  const inCart = useMemo(() => {
+    return cart.some((product) => product.id === parseInt(id));
+  }, [cart, id]);
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -55,6 +59,8 @@ const ProductDetailPage = () => {
   const handleRemoveFavorite = () => {
     removeFavorite(parseInt(id));
   };
+
+  console.log("In cart: ", cart, inCart);
   return (
     <main className="productDetailMain container">
       <Breadcrumb data={["Product List", "Female Shoe", "Product details"]} />
@@ -92,21 +98,15 @@ const ProductDetailPage = () => {
             <li className="productDetail--color"></li>
           </ul>
           <div className="productDetail--buttons">
-            {cart.some((product) => product.id === parseInt(id)) ? (
-              <button
-                className="productDetail--cart productDetail--cart-remove"
-                onClick={handleRemoveFromCart}
-              >
-                Remove From Cart
-              </button>
-            ) : (
-              <button
-                className="productDetail--cart"
-                onClick={handleAddToCart}
-              >
-                Add to cart
-              </button>
-            )}
+            <button
+              className={`productDetail--cart ${
+                inCart && "productDetail--cart-remove"
+              }`}
+              onClick={inCart ? handleRemoveFromCart : handleAddToCart}
+            >
+              {inCart ? "Remove From Cart" : "Add To Cart"}
+            </button>
+
             <button
               className="productDetail--favourite"
               onClick={isFavourite ? handleRemoveFavorite : handleAddFavorite}
