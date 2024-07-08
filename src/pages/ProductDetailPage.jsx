@@ -7,26 +7,44 @@ import CartIcon from "@/assets/icons/cart.svg?react";
 import PaymentIcon from "@/assets/icons/payment-card.svg?react";
 import UserIcon from "@/assets/icons/user.svg?react";
 import RotateIcon from "@/assets/icons/rotate.svg?react";
-import {reviews} from "@/data/products";
-import ProductReviewList from "../components/ProductReviewList";
-import { formatPrice } from "../utils/product";
-import "@/styles/ProductDetail.css"
+import { reviews } from "@/data/products";
+import ProductReviewList from "@/components/ProductReviewList";
+import { formatPrice } from "@/utils/product";
+import "@/styles/ProductDetail.css";
+import { useContext, useMemo } from "react";
+import CartContext from "@/contexts/CartContext";
+import { useParams } from "react-router-dom";
+import { products } from "@/data/products";
 
 const ProductDetailPage = () => {
+  const { cart, addToCart, removeFromCart } = useContext(CartContext);
+
+  const { id } = useParams();
+
+  const product = useMemo(() => {
+    return products.find((product) => product.id === parseInt(id));
+  }, [id]);
+
+  const handleAddToCart = () => {
+    addToCart({ id: id });
+  };
+
+  const handleRemoveFromCart = () => {
+    removeFromCart(id);
+  };
+
   return (
     <main className="productDetailMain container">
       <Breadcrumb data={["Product List", "Female Shoe", "Product details"]} />
       <div className="productImage">
         <img
-          src="/images/pic1.jpeg"
+          src={product.images[0]}
           alt="product"
         />
       </div>
       <section className="productDetail">
         <div className="productDetail--info">
-          <h1 className="productDetail--title">
-            Tommy Hilfiger Men's Classic Fit Shirt
-          </h1>
+          <h1 className="productDetail--title">{product.title}</h1>
           <div className="productRating">
             <Rating
               size={16}
@@ -36,7 +54,10 @@ const ProductDetailPage = () => {
             <p className="productRating--count">{227}</p>
           </div>
           <p className="productDetail--price">
-            {formatPrice(63090)} <span className="productDetail--price-slash">{formatPrice(70000)}</span>
+            {formatPrice(product.price)}{" "}
+            <span className="productDetail--price-slash">
+              {formatPrice(product.price * 2)}
+            </span>
           </p>
           <p className="productDetail--discount">
             <TagIcon /> Save 50% right now
@@ -49,7 +70,21 @@ const ProductDetailPage = () => {
             <li className="productDetail--color"></li>
           </ul>
           <div className="productDetail--buttons">
-            <button className="productDetail--cart">Add to cart</button>
+            {cart.some((product) => product.id === id) ? (
+              <button
+                className="productDetail--cart productDetail--cart-remove"
+                onClick={handleRemoveFromCart}
+              >
+                Remove From Cart
+              </button>
+            ) : (
+              <button
+                className="productDetail--cart"
+                onClick={handleAddToCart}
+              >
+                Add to cart
+              </button>
+            )}
             <button className="productDetail--favourite">
               <FavouriteIcon />
             </button>
@@ -78,7 +113,9 @@ const ProductDetailPage = () => {
         <div className="productInfo--content">
           <div className="productReviews">
             <ProductReviewList reviews={reviews} />
-            <p className="productReview--load-more"><RotateIcon /> load more reviews</p>
+            <p className="productReview--load-more">
+              <RotateIcon /> load more reviews
+            </p>
           </div>
         </div>
       </section>

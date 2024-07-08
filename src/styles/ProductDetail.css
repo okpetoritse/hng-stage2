@@ -1,315 +1,324 @@
 /* Product Details */
 .productDetailMain {
-    display: grid;
-    grid-template-columns: 787px 1fr;
-    gap: 41px;
-    margin-bottom: 85px;
-  }
-  
-  .productDetailMain .breadcrumb {
-    grid-column: span 2;
-  }
-  
-  .productImage img {
-    width: 100%;
-    height: 553px;
-    object-fit: cover;
-    border-radius: 8px;
-  }
-  .productDetail {
+  display: grid;
+  grid-template-columns: 787px 1fr;
+  gap: 41px;
+  margin-bottom: 85px;
+}
+
+.productDetailMain .breadcrumb {
+  grid-column: span 2;
+}
+
+.productImage img {
+  width: 100%;
+  height: 553px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.productDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.productDetail--info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.productDetail--title {
+  color: #0f1d2d;
+
+  /* header/06 */
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.productDetail--price {
+  display: flex;
+  gap: 7px;
+  align-items: end;
+  color: #ff6f61;
+  font-family: "Plus Jakarta Sans";
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px;
+}
+
+.productDetail--price-slash {
+  color: #333;
+  font-family: "Open Sans";
+  text-decoration: line-through;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.productDetail--discount {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  color: #777;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.productDetail--color-text {
+  margin-top: 17px;
+  color: #18181b;
+  font-family: "Plus Jakarta Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.productDetail--colors {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.productDetail--color {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.productDetail--color:first-child {
+  background: #4a90e2;
+}
+
+.productDetail--color:nth-child(2) {
+  background: #ea580c;
+}
+
+.productDetail--color:nth-child(3) {
+  background: #6366f1;
+}
+
+.productDetail--color:last-child {
+  background: #334155;
+}
+
+.productDetail--buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 35px;
+}
+
+.productDetail--cart {
+  padding: 14px 29px;
+  background: #4a90e2;
+  border: none;
+  border-radius: 8px;
+  color: #fdfefb;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.productDetail--cart-remove {
+  padding: 14px 29px;
+  background: #aa4a41;
+  border: none;
+  border-radius: 8px;
+  color: #fdfefb;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.productDetail--favourite {
+  border-radius: 5px;
+  border: 1px solid #d4d4d8;
+
+  background: #fafafb;
+  width: 58px;
+  height: 59px;
+  padding: 16px;
+}
+
+.productDetail--favourite svg {
+  color: #ff6f61;
+}
+
+.productDetail--addInfo {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  color: #828282;
+
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.productDetail--addInfo svg {
+  color: #b9b9b9;
+}
+
+.productInfo--tabs {
+  display: flex;
+  gap: 58px;
+  border-bottom: 4px solid #f0f0f0;
+}
+.productInfo--tab {
+  position: relative;
+  color: #777;
+
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding-bottom: 19px;
+}
+
+.productInfo--tab.active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -4px;
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background: #4a90e2;
+}
+
+.productInfo--review-count {
+  width: 32px;
+  height: 20px;
+  padding: 4px 10px 3px 10px;
+
+  border-radius: 24px;
+  background: #f0f0f0;
+
+  color: #dc1f21;
+  text-align: center;
+
+  font-family: "Plus Jakarta Sans";
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Review list Component */
+.productReview--list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 41px;
+  gap: 16px;
+}
+
+/* Review component */
+.productReview--item {
+  display: flex;
+  padding-bottom: 20px;
+  gap: 23px;
+}
+
+.productReview--item:not(:last-child):not(:only-child) {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.productReview--images {
+  display: flex;
+  gap: 10px;
+}
+
+.productReview--image {
+  width: 43px;
+  height: 43px;
+  border-radius: 8px;
+}
+
+.productReview--avatar {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+}
+
+.productReview--desc {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.productReview--comment {
+  color: #555;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.productReview--info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.productReview--name {
+  color: #0f1d2d;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.productReview--date {
+  color: #777;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.productReview--load-more {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #555;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* recentlyViewed */
+
+.recentlyViewed {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.recentlyViewed--title {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.productList--recently {
+  display: grid;
+  grid-template-columns: repeat(2, 191px);
+  gap: 20px;
+}
+.productList--recently .productCard:first-child img,
+.productList--recently .productCard:nth-child(2) img {
+  width: 191px;
+  height: 123px;
+}
+
+.productList--recently .productCard .productCard--favourite {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  /* Product Details */
+  .productDetailMain {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 30px;
   }
-  
-  .productDetail--info {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .productDetail--title {
-    color: #0f1d2d;
-  
-    /* header/06 */
-    font-family: "Open Sans";
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 700;
-  }
-  
-  .productDetail--price {
-    display: flex;
-    gap: 7px;
-    align-items: end;
-    color: #ff6f61;
-    font-family: "Plus Jakarta Sans";
-    font-size: 1.75rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 38px;
-  }
-  
-  .productDetail--price-slash {
-    color: #333;
-    font-family: "Open Sans";
-    text-decoration: line-through;
-    font-size: 1rem;
-    font-weight: 400;
-  }
-  
-  .productDetail--discount {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    color: #777;
-    font-size: 0.875rem;
-    font-weight: 400;
-  }
-  .productDetail--color-text {
-    margin-top: 17px;
-    color: #18181b;
-    font-family: "Plus Jakarta Sans";
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 24px;
-  }
-  
-  .productDetail--colors {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin-top: 18px;
-  }
-  
-  .productDetail--color {
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .productDetail--color:first-child {
-    background: #4a90e2;
-  }
-  
-  .productDetail--color:nth-child(2) {
-    background: #ea580c;
-  }
-  
-  .productDetail--color:nth-child(3) {
-    background: #6366f1;
-  }
-  
-  .productDetail--color:last-child {
-    background: #334155;
-  }
-  
-  .productDetail--buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 35px;
-  }
-  
-  .productDetail--cart {
-    padding: 14px 29px;
-    background: #4a90e2;
-    border: none;
-    border-radius: 8px;
-    color: #fdfefb;
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  
-  .productDetail--favourite {
-    border-radius: 5px;
-    border: 1px solid #d4d4d8;
-  
-    background: #fafafb;
-    width: 58px;
-    height: 59px;
-    padding: 16px;
-  }
-  
-  .productDetail--favourite svg {
-    color: #ff6f61;
-  }
-  
-  .productDetail--addInfo {
-    display: flex;
-    gap: 14px;
-    align-items: center;
-    color: #828282;
-  
-    font-family: "Open Sans";
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 400;
-  }
-  
-  .productDetail--addInfo svg {
-    color: #b9b9b9;
-  }
-  
-  .productInfo--tabs {
-    display: flex;
-    gap: 58px;
-    border-bottom: 4px solid #f0f0f0;
-  }
-  .productInfo--tab {
-    position: relative;
-    color: #777;
-  
-    font-size: 0.875rem;
-    font-weight: 700;
-    padding-bottom: 19px;
-  }
-  
-  .productInfo--tab.active::after {
-    content: "";
-    position: absolute;
-    display: block;
-    bottom: -4px;
-    width: 100%;
-    height: 4px;
-    border-radius: 10px;
-    background: #4a90e2;
-  }
-  
-  .productInfo--review-count {
-    width: 32px;
-    height: 20px;
-    padding: 4px 10px 3px 10px;
-  
-    border-radius: 24px;
-    background: #f0f0f0;
-  
-    color: #dc1f21;
-    text-align: center;
-  
-    font-family: "Plus Jakarta Sans";
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-  }
-  
-  /* Review list Component */
-  .productReview--list {
-    display: flex;
-    flex-direction: column;
-    margin-top: 41px;
-    gap: 16px;
-  }
-  
-  /* Review component */
-  .productReview--item {
-    display: flex;
-    padding-bottom: 20px;
-    gap: 23px;
-  }
-  
-  .productReview--item:not(:last-child):not(:only-child) {
-    border-bottom: 1px solid #d6d6d6;
-  }
-  
-  .productReview--images {
-    display: flex;
+
+  .productList--recently {
     gap: 10px;
   }
-  
-  .productReview--image {
-    width: 43px;
-    height: 43px;
-    border-radius: 8px;
+
+  .productList--recently .productCard:last-child {
+    grid-column: span 2;
   }
-  
-  .productReview--avatar {
-    width: 43px;
-    height: 43px;
-    border-radius: 50%;
-  }
-  
-  .productReview--desc {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .productReview--comment {
-    color: #555;
-    font-size: 1rem;
-    font-weight: 400;
-  }
-  
-  .productReview--info {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  
-  .productReview--name {
-    color: #0f1d2d;
-    font-size: 0.875rem;
-    font-weight: 700;
-  }
-  
-  .productReview--date {
-    color: #777;
-    font-size: 0.875rem;
-    font-weight: 400;
-  }
-  
-  .productReview--load-more {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    color: #555;
-    font-size: 0.7rem;
-    font-weight: 600;
-  }
-  
-  /* recentlyViewed */
-  
-  .recentlyViewed {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .recentlyViewed--title {
-    color: #000;
-    font-size: 1rem;
-    font-weight: 700;
-  }
-  
-  .productList--recently {
-    display: grid;
-    grid-template-columns: repeat(2, 191px);
-    gap: 20px;
-  }
-  .productList--recently .productCard:first-child img,
-  .productList--recently .productCard:nth-child(2) img {
-    width: 191px;
-    height: 123px;
-  }
-  
-  .productList--recently .productCard .productCard--favourite {
-    display: none;
-  }
-  
-  @media screen and (max-width: 768px) {
-    /* Product Details */
-    .productDetailMain {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-  
-    .productList--recently {
-      gap: 10px;
-    }
-  
-    .productList--recently .productCard:last-child {
-      grid-column: span 2;
-    }
-  }
-  
+}

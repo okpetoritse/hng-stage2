@@ -7,13 +7,11 @@ import AppRoutes from "./router";
 
 function App() {
   return (
-    <FavoritesProvider>
-      <CartProvider>
-        <Header />
-        <AppRoutes />
-        <Footer />
-      </CartProvider>
-    </FavoritesProvider>
+    <>
+      <Header />
+      <AppRoutes />
+      <Footer />
+    </>
   );
 }
 
