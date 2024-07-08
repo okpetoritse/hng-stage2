@@ -48,8 +48,6 @@ const ProductDetailPage = () => {
   const handleRemoveFavorite = () => {
     removeFavorite(parseInt(id));
   };
-
-  console.log("IS Favourite", isFavourite);
   return (
     <main className="productDetailMain container">
       <Breadcrumb data={["Product List", "Female Shoe", "Product details"]} />
@@ -102,12 +100,11 @@ const ProductDetailPage = () => {
                 Add to cart
               </button>
             )}
-            <button className="productDetail--favourite">
-              {isFavourite ? (
-                <FavouriteFilledIcon onClick={handleRemoveFavorite} />
-              ) : (
-                <FavouriteIcon onClick={handleAddFavorite} />
-              )}
+            <button
+              className="productDetail--favourite"
+              onClick={isFavourite ? handleRemoveFavorite : handleAddFavorite}
+            >
+              {isFavourite ? <FavouriteFilledIcon /> : <FavouriteIcon />}
             </button>
           </div>
         </div>

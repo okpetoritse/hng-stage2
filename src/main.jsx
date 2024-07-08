@@ -11,7 +11,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <FavoritesProvider>
       <CartProvider>
-        <RouterProvider router={router} />
+        <RouterProvider router={router}>
+          <App />
+        </RouterProvider>
       </CartProvider>
     </FavoritesProvider>
   </React.StrictMode>
