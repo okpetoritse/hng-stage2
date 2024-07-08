@@ -46,9 +46,9 @@
   transform: translateY(-50%);
 }
 .headerSearch--input {
-  min-width: 400px;
+  min-width: 500px;
   padding: 20px 24px 20px 67px;
-  background: #fff5f4;
+  background: #f5f5f5;
   border: none;
   border-radius: 16px;
 
@@ -67,6 +67,11 @@
   width: 50px;
   height: auto;
   border-radius: 50%;
+}
+
+.headerNav svg {
+  width: 30px;
+  height: 30px;
 }
 
 @media screen and (max-width: 768px) {
@@ -794,7 +799,7 @@
     gap: 30px;
   }
 
-  .productList--recently  {
+  .productList--recently {
     gap: 16px;
   }
 

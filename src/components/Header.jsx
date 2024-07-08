@@ -25,7 +25,7 @@ const Header = () => {
               <FavouriteIcon />
             </li>
             <Link to="/cart" className="headerNav--item">
-              <CartIcon />
+              <CartIcon className="headerNav--cart" />
             </Link>
             <li className="headerNav--item">
               <img
