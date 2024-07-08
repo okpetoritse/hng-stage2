@@ -10,6 +10,7 @@ import RotateIcon from "@/assets/icons/rotate.svg?react";
 import {reviews} from "@/data/products";
 import ProductReviewList from "../components/ProductReviewList";
 import { formatPrice } from "../utils/product";
+import "@/styles/ProductDetail.css"
 
 const ProductDetailPage = () => {
   return (
