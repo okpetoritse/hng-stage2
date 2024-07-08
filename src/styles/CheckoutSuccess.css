@@ -1,0 +1,32 @@
+.checkoutSuccess {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 0;
+  gap: 12px;
+}
+
+.checkoutSucess--title {
+  color: #19304b;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.checkoutSuccess--desc {
+  color: #254871;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.checkoutSuccess--order {
+  color: #19304b;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-align: start;
+}

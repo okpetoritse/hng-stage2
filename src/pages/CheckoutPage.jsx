@@ -3,6 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import MarkOutlinedIcon from "@/assets/icons/mark-outlined.svg?react";
 import CheckOutlinedIcon from "@/assets/icons/check-outlined.svg?react";
 import { formatPrice } from "@/utils/product";
+import { Link } from "react-router-dom";
 
 const CheckoutPage = () => {
   const products = [
@@ -152,7 +153,12 @@ const CheckoutPage = () => {
               <p className="cartProducts--text">Total</p>
               <p className="cartProducts--price-total">{formatPrice(38000)}</p>
             </div>
-            <button className="cartProducts--checkout">Confirm Payment</button>
+            <Link
+              to="/success"
+              className="cartProducts--checkout"
+            >
+              Confirm Payment
+            </Link>
           </section>
         </section>
       </div>

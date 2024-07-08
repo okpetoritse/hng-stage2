@@ -2,7 +2,8 @@ import ProductsPage from "@/pages/ProductsPage";
 import ProductDetailPage from "@/pages/ProductDetailPage";
 import MainLayout from "@/layouts/MainLayout";
 import CartPage from "@/pages/CartPage";
-import CheckoutPage from "../pages/CheckoutPage";
+import CheckoutPage from "@/pages/CheckoutPage";
+import CheckoutSuccessPage from "@/pages/CheckoutSuccessPage";
 
 const routes = [
   {
@@ -23,6 +24,10 @@ const routes = [
       {
         path: "/checkout",
         element: <CheckoutPage />,
+      },
+      {
+        path: "/success",
+        element: <CheckoutSuccessPage />,
       }
     ],
   },
