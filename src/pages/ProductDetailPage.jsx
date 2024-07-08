@@ -92,10 +92,12 @@ const ProductDetailPage = () => {
           </p>
           <p className="productDetail--color-text">Colors</p>
           <ul className="productDetail--colors">
-            <li className="productDetail--color"></li>
-            <li className="productDetail--color"></li>
-            <li className="productDetail--color"></li>
-            <li className="productDetail--color"></li>
+            {product.colors.map((color) => (
+              <li
+                className="productDetail--color"
+                style={{ background: color }}
+              ></li>
+            ))}
           </ul>
           <div className="productDetail--buttons">
             <button
