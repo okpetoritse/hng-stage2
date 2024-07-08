@@ -2,7 +2,7 @@ import FavouriteIcon from "@/assets/icons/favourite.svg?react";
 import { formatPrice } from "../utils/product";
 import { Link } from "react-router-dom";
 
-const ProductCard = ({ title, tags, price }) => {
+const ProductCard = ({ title, tags, price, images }) => {
   // Call the formatPrice function to format the price
   const formattedPrice = formatPrice(price);
 
@@ -13,7 +13,7 @@ const ProductCard = ({ title, tags, price }) => {
     >
       <div className="productCard--img">
         <img
-          src="https://picsum.photos/400/257"
+          src={images[0]}
           alt="product"
         />
         <FavouriteIcon className="productCard--favourite" />

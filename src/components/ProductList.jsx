@@ -10,6 +10,7 @@ const ProductList = ({ products }) => {
             tags={product.tags}
             price={product.price}
             rating={product.rating}
+            images={product.images}
           />
         ))}
       </section>

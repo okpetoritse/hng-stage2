@@ -11,7 +11,7 @@ const ProductReviewCard = ({
   return (
     <li className="productReview--item">
       <img
-        src="https://picsum.photos/50/50"
+        src="/images/avatar.png"
         alt="avatar"
         className="productReview--avatar"
       />

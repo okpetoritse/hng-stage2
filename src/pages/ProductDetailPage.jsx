@@ -17,7 +17,7 @@ const ProductDetailPage = () => {
       <Breadcrumb data={["Product List", "Female Shoe", "Product details"]} />
       <div className="productImage">
         <img
-          src="https://picsum.photos/787/553"
+          src="/images/pic1.jpeg"
           alt="product"
         />
       </div>
@@ -89,18 +89,21 @@ const ProductDetailPage = () => {
             tags={["Tag 1", "Tag 2"]}
             price={70000}
             rating={{ average: 5, count: 227 }}
+            images={["/images/pic1.jpeg"]}
           />
           <ProductCard
             title="Product Name"
             tags={["Tag 1", "Tag 2"]}
             price={70000}
             rating={{ average: 5, count: 227 }}
+            images={["/images/pic2.jpeg"]}
           />
           <ProductCard
             title="Product Name"
             tags={["Tag 1", "Tag 2"]}
             price={70000}
             rating={{ average: 5, count: 227 }}
+            images={["/images/pic3.jpeg"]}
           />
         </div>
       </aside>

@@ -5,13 +5,16 @@ const products = [
     tags: ["Best Sellers", "Shoe"],
     price: 43000,
     rating: { count: 234, average: 2.5 },
+    images: ["/images/pic1.jpeg"],
   },
   {
     id: 2,
     title: "New balance Women's Double G Leather heels in nude",
     tags: ["Best Sellers", "Shoe"],
     price: 85000,
+    tags: ["Best Sellers", "Shoe"],
     rating: { count: 240, average: 3 },
+    images: ["/images/pic2.jpeg"],
   },
   {
     id: 3,
@@ -19,6 +22,7 @@ const products = [
     tags: ["Best Sellers", "Shoe"],
     price: 76000,
     rating: { count: 34, average: 4 },
+    images: ["/images/pic3.jpeg"],
   },
   {
     id: 4,
@@ -26,6 +30,7 @@ const products = [
     tags: ["Best Sellers", "Shoe"],
     price: 68600,
     rating: { count: 234, average: 4 },
+    images: ["/images/pic4.jpeg"],
   },
   {
     id: 5,
@@ -33,6 +38,7 @@ const products = [
     tags: ["Best Sellers", "Shoe"],
     price: 43000,
     rating: { count: 103, average: 4.5 },
+    images: ["/images/pic5.jpeg"],
   },
   {
     id: 6,
@@ -40,6 +46,7 @@ const products = [
     tags: ["Best Sellers", "Shoe"],
     price: 43000,
     rating: { count: 693, average: 3 },
+    images: ["/images/pic6.jpeg"],
   },
   {
     id: 7,
@@ -47,6 +54,7 @@ const products = [
     tags: ["New Arrivals", "Shirt"],
     price: 55000,
     rating: { count: 87, average: 4.2 },
+    images: ["/images/pic1.jpeg"],
   },
   {
     id: 8,
@@ -54,6 +62,7 @@ const products = [
     tags: ["New Arrivals", "Pants"],
     price: 67000,
     rating: { count: 120, average: 3.8 },
+    images: ["/images/pic2.jpeg"],
   },
   {
     id: 9,
@@ -61,6 +70,7 @@ const products = [
     tags: ["New Arrivals", "Accessories"],
     price: 25000,
     rating: { count: 45, average: 4.7 },
+    images: ["/images/pic3.jpeg"],
   },
   {
     id: 10,
@@ -68,6 +78,7 @@ const products = [
     tags: ["New Arrivals", "Accessories"],
     price: 24900,
     rating: { count: 1200, average: 4.8 },
+    images: ["/images/pic4.jpeg"],
   },
   {
     id: 11,
@@ -75,6 +86,7 @@ const products = [
     tags: ["New Arrivals", "Electronics"],
     price: 119999,
     rating: { count: 500, average: 4.5 },
+    images: ["/images/pic5.jpeg"],
   },
   {
     id: 12,
@@ -82,6 +94,7 @@ const products = [
     tags: ["New Arrivals", "Gaming"],
     price: 49999,
     rating: { count: 1000, average: 4.9 },
+    images: ["/images/pic6.jpeg"],
   },
   {
     id: 13,
@@ -89,6 +102,7 @@ const products = [
     tags: ["New Arrivals", "Photography"],
     price: 389900,
     rating: { count: 300, average: 4.7 },
+    images: ["/images/pic1.jpeg"],
   },
   {
     id: 14,
@@ -96,6 +110,7 @@ const products = [
     tags: ["New Arrivals", "Home Appliances"],
     price: 69900,
     rating: { count: 800, average: 4.6 },
+    images: ["/images/pic2.jpeg"],
   },
   {
     id: 15,
@@ -103,6 +118,7 @@ const products = [
     tags: ["New Arrivals", "Fitness"],
     price: 17900,
     rating: { count: 400, average: 4.3 },
+    images: ["/images/pic3.jpeg"],
   },
   {
     id: 16,
@@ -110,6 +126,7 @@ const products = [
     tags: ["New Arrivals", "TV"],
     price: 249999,
     rating: { count: 200, average: 4.8 },
+    images: ["/images/pic4.jpeg"],
   },
   {
     id: 17,
@@ -117,6 +134,7 @@ const products = [
     tags: ["New Arrivals", "Audio"],
     price: 29900,
     rating: { count: 600, average: 4.7 },
+    images: ["/images/pic5.jpeg"],
   },
   {
     id: 18,
@@ -124,6 +142,7 @@ const products = [
     tags: ["New Arrivals", "Gaming"],
     price: 29999,
     rating: { count: 900, average: 4.5 },
+    images: ["/images/pic6.jpeg"],
   },
   {
     id: 19,
@@ -131,6 +150,7 @@ const products = [
     tags: ["New Arrivals", "Kitchen Appliances"],
     price: 39900,
     rating: { count: 250, average: 4.9 },
+    images: ["/images/pic1.jpeg"],
   },
   {
     id: 20,
@@ -138,6 +158,7 @@ const products = [
     tags: ["New Arrivals", "Laptops"],
     price: 129999,
     rating: { count: 400, average: 4.8 },
+    images: ["/images/pic2.jpeg"],
   },
 ];
 
@@ -150,7 +171,7 @@ const reviews = [
     },
     createAt: "March 14 2024",
     rating: { count: 234, average: 2.5 },
-    images: ["https://picsum.photos/50/50", "https://picsum.photos/50/50"],
+    images: ["/images/pic3.jpeg", "/images/pic4.jpeg"],
   },
 
   {
@@ -161,7 +182,7 @@ const reviews = [
     },
     createAt: "April 2, 2024",
     rating: { count: 120, average: 4.7 },
-    images: ["https://picsum.photos/50/50", "https://picsum.photos/50/50"],
+    images: ["/images/pic1.jpeg", "/images/pic2.jpeg"],
   },
   {
     id: 3,
@@ -171,7 +192,7 @@ const reviews = [
     },
     createAt: "April 10, 2024",
     rating: { count: 500, average: 4.9 },
-    images: ["https://picsum.photos/50/50", "https://picsum.photos/50/50"],
+    images: ["/images/pic5.jpeg", "/images/pic6.jpeg"],
   },
 ];
 
