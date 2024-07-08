@@ -19,6 +19,10 @@ const ProductPage = () => {
     const selected = data.selected;
     const offset = (selected * perPage) % products.length;
     setItemOffset(offset);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const currentProducts = products.slice(itemOffset, endOffset);

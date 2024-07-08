@@ -93,6 +93,7 @@ const ProductDetailPage = () => {
           <ul className="productDetail--colors">
             {product.colors.map((color) => (
               <li
+                key={color}
                 className="productDetail--color"
                 style={{ background: color }}
               ></li>
@@ -152,7 +153,10 @@ const ProductDetailPage = () => {
             .filter((product) => product.id !== parseInt(id))
             .slice(0, 3)
             .map((product) => (
-              <ProductCard {...product} />
+              <ProductCard
+                key={product.id}
+                {...product}
+              />
             ))}
         </div>
       </aside>

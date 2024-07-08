@@ -4,24 +4,16 @@ import MarkOutlinedIcon from "@/assets/icons/mark-outlined.svg?react";
 import CheckOutlinedIcon from "@/assets/icons/check-outlined.svg?react";
 import { formatPrice } from "@/utils/product";
 import { Link } from "react-router-dom";
+import { useContext, useMemo } from "react";
+import CartContext from "@/contexts/CartContext";
 
 const CheckoutPage = () => {
-  const products = [
-    {
-      id: 1,
-      name: "Gucci Women's High-heeled Shoes",
-      price: "2380",
-      imageUrl: "https://picsum.photos/400/257",
-      colorOptions: ["Black"],
-    },
-    {
-      id: 2,
-      name: "Gucci Women's Leather Bag",
-      price: "23498",
-      imageUrl: "https://picsum.photos/400/257",
-      colorOptions: ["Pink", "Black"],
-    },
-  ];
+  const { cart } = useContext(CartContext);
+  const cartSubTotal = useMemo(() => {
+    return cart.reduce((acc, product) => acc + product.price, 0);
+  }, [cart]);
+
+  const shippingFee = 4980;
   return (
     <main>
       <Breadcrumb data={["Product List"]} />
@@ -119,18 +111,18 @@ const CheckoutPage = () => {
         <section className="checkout--order">
           <h3 className="checkout--orderTitle">Order details</h3>
           <ul className="checkout--orderList">
-            {products &&
-              products.map((product) => (
+            {cart &&
+              cart.map((product) => (
                 <li className="cartProduct--item checkout--orderItem">
                   <div className="cartProductItem--info">
                     <img
                       className="cartProductItem--img"
-                      src={product.imageUrl}
+                      src={product.images[0]}
                       alt="product"
                     />
                     <div className="cartProductItem--desc">
                       <p className="cartProductItem--tag">Shoe</p>
-                      <p className="cartProductItem--title">{product.name}</p>
+                      <p className="cartProductItem--title">{product.title}</p>
                       <p className="cartProductItem--price">
                         {formatPrice(product.price)}
                       </p>
@@ -143,15 +135,17 @@ const CheckoutPage = () => {
             <h3 className="cartProducts--title">Summary</h3>
             <div className="cartProducts--item">
               <p className="cartProducts--text">Sub-Total</p>
-              <p className="cartProducts--price">{formatPrice(23080)}</p>
+              <p className="cartProducts--price">{formatPrice(cartSubTotal)}</p>
             </div>
             <div className="cartProducts--item">
               <p className="cartProducts--text">Estimated Shipping fee</p>
-              <p className="cartProducts--price">{formatPrice(4980)}</p>
+              <p className="cartProducts--price">{formatPrice(shippingFee)}</p>
             </div>
             <div className="cartProducts--item">
               <p className="cartProducts--text">Total</p>
-              <p className="cartProducts--price-total">{formatPrice(38000)}</p>
+              <p className="cartProducts--price-total">
+                {formatPrice(shippingFee + cartSubTotal)}
+              </p>
             </div>
             <Link
               to="/success"
