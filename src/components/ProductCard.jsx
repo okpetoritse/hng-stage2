@@ -1,10 +1,19 @@
 import FavouriteIcon from "@/assets/icons/favourite.svg?react";
+import FavoritesContext from "@/contexts/FavoritesContext";
 import { formatPrice } from "../utils/product";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
 
-const ProductCard = ({ title, tags, price, images }) => {
-  // Call the formatPrice function to format the price
+const ProductCard = ({ id, title, tags, price, images }) => {
+  const { addFavorite } = useContext(FavoritesContext);
+
   const formattedPrice = formatPrice(price);
+
+  const handleAddFavorite = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    addFavorite({ id, title, tags, price, images });
+  }
 
   return (
     <Link
@@ -16,7 +25,10 @@ const ProductCard = ({ title, tags, price, images }) => {
           src={images[0]}
           alt="product"
         />
-        <FavouriteIcon className="productCard--favourite" />
+        <FavouriteIcon
+          className="productCard--favourite"
+          onClick={handleAddFavorite}
+        />
       </div>
       <div className="productCard--desc">
         <p className="productCard--title">{title}</p>

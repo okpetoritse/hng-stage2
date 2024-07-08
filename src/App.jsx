@@ -1,19 +1,19 @@
-import { useState } from "react";
 import "./App.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import ProductList from "@/components/ProductList";
-import Breadcrumb from "@/components/Breadcrumb";
-import ReactPaginate from "react-paginate";
+import { FavoritesProvider } from "./contexts/FavoritesContext";
+import { CartProvider } from "./contexts/CartContext";
 import AppRoutes from "./router";
 
 function App() {
   return (
-    <>
-      <Header />
-      <AppRoutes />
-      <Footer />
-    </>
+    <FavoritesProvider>
+      <CartProvider>
+        <Header />
+        <AppRoutes />
+        <Footer />
+      </CartProvider>
+    </FavoritesProvider>
   );
 }
 
