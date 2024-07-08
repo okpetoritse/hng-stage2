@@ -12,7 +12,7 @@ import { reviews } from "@/data/products";
 import ProductReviewList from "@/components/ProductReviewList";
 import { formatPrice } from "@/utils/product";
 import "@/styles/ProductDetail.css";
-import { useContext, useMemo } from "react";
+import { useContext, useEffect, useMemo } from "react";
 import CartContext from "@/contexts/CartContext";
 import FavoritesContext from "@/contexts/FavoritesContext";
 import { useParams } from "react-router-dom";
@@ -24,6 +24,13 @@ const ProductDetailPage = () => {
     useContext(FavoritesContext);
 
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, [id]);
 
   const product = useMemo(() => {
     return products.find((product) => product.id === parseInt(id));
