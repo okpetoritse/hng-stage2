@@ -1,17 +1,18 @@
 import "@/styles/Checkout.css";
 import Breadcrumb from "@/components/Breadcrumb";
-import MarkOutlinedIcon from "@/assets/icons/mark-outlined.svg?react";
-import CheckOutlinedIcon from "@/assets/icons/check-outlined.svg?react";
 import { formatPrice } from "@/utils/product";
 import { Link } from "react-router-dom";
-import { useContext, useMemo } from "react";
+import { useContext, useMemo, useState } from "react";
 import CartContext from "@/contexts/CartContext";
+import Checkbox from "@/components/Checkbox";
 
 const CheckoutPage = () => {
   const { cart } = useContext(CartContext);
   const cartSubTotal = useMemo(() => {
     return cart.reduce((acc, product) => acc + product.price, 0);
   }, [cart]);
+
+  const [paymentMethod, setPaymentMethod] = useState("");
 
   const shippingFee = 4980;
   return (
@@ -89,16 +90,36 @@ const CheckoutPage = () => {
             </div>
           </div>
           <h3 className="checkout--heading">Payment Method</h3>
-          <div className="checkout--payment active">
-            <MarkOutlinedIcon />
+          <div
+            className={`checkout--payment
+              ${paymentMethod === "onDelivery" ? "active" : ""}`}
+            onClick={() => {
+              if (paymentMethod === "onDelivery") {
+                setPaymentMethod("");
+                return;
+              }
+              setPaymentMethod("onDelivery");
+            }}
+          >
+            <Checkbox checked={paymentMethod === "onDelivery"} />
             <p>
               Payment on Delivery <br /> <span>make available the amount</span>
             </p>
           </div>
-          <div className="checkout--payment">
-            <CheckOutlinedIcon />
+          <div
+            className={`checkout--payment
+            ${paymentMethod === "card" ? "active" : ""}`}
+            onClick={() => {
+              if (paymentMethod === "card") {
+                setPaymentMethod("");
+                return;
+              }
+              setPaymentMethod("card");
+            }}
+          >
+            <Checkbox checked={paymentMethod === "card"} />
             <p>
-              Pay stack <br /> <span>one click pay stack payment </span>
+              Pay Stack <br /> <span>pay with your card </span>
             </p>
           </div>
         </section>

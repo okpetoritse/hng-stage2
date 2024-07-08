@@ -68,11 +68,13 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+  border-radius: 8px;
+  border: 1.5px solid transparent;
 }
 
 .checkout--payment.active {
   border-radius: 8px;
-  border: 1.5px solid #4a90e2;
+  border: 1.5px solid #E8FDE8;
 }
 
 .checkout--payment span {
