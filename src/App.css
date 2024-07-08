@@ -70,8 +70,8 @@
 }
 
 .headerNav svg {
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
 }
 
 @media screen and (max-width: 768px) {
@@ -800,7 +800,7 @@
   }
 
   .productList--recently {
-    gap: 16px;
+    gap: 10px;
   }
 
   .productList--recently .productCard:last-child {
