@@ -101,12 +101,6 @@ const CheckoutPage = () => {
               Pay stack <br /> <span>one click pay stack payment </span>
             </p>
           </div>
-          <div className="checkout--payment">
-            <CheckOutlinedIcon />
-            <p>
-              Pay stack <br /> <span>one click pay stack payment </span>
-            </p>
-          </div>
         </section>
         <section className="checkout--order">
           <h3 className="checkout--orderTitle">Order details</h3>
