@@ -99,7 +99,7 @@ const products = [
     tags: ["New Arrivals", "Shoe"],
     price: 95000,
     rating: { count: 300, average: 4.3 },
-    images: ["/images/pic7.jpeg"],
+    images: ["/images/pic5.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -108,7 +108,7 @@ const products = [
     tags: ["New Arrivals", "Shoe"],
     price: 89000,
     rating: { count: 150, average: 4.6 },
-    images: ["/images/pic8.jpeg"],
+    images: ["/images/pic6.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -117,7 +117,7 @@ const products = [
     tags: ["New Arrivals", "Shoe"],
     price: 65000,
     rating: { count: 80, average: 4.1 },
-    images: ["/images/pic9.jpeg"],
+    images: ["/images/pic1.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -126,7 +126,7 @@ const products = [
     tags: ["New Arrivals", "Underwear"],
     price: 35000,
     rating: { count: 45, average: 4.5 },
-    images: ["/images/pic10.jpeg"],
+    images: ["/images/pic2.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -135,7 +135,7 @@ const products = [
     tags: ["New Arrivals", "Accessories"],
     price: 175000,
     rating: { count: 25, average: 4.2 },
-    images: ["/images/pic11.jpeg"],
+    images: ["/images/pic3.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -144,7 +144,7 @@ const products = [
     tags: ["New Arrivals", "Electronics"],
     price: 125000,
     rating: { count: 5000, average: 4.9 },
-    images: ["/images/pic12.jpeg"],
+    images: ["/images/pic4.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -153,7 +153,7 @@ const products = [
     tags: ["New Arrivals", "Electronics"],
     price: 35000,
     rating: { count: 1000, average: 4.8 },
-    images: ["/images/pic13.jpeg"],
+    images: ["/images/pic5.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -162,7 +162,7 @@ const products = [
     tags: ["New Arrivals", "Electronics"],
     price: 250000,
     rating: { count: 200, average: 4.7 },
-    images: ["/images/pic14.jpeg"],
+    images: ["/images/pic6.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -171,7 +171,7 @@ const products = [
     tags: ["New Arrivals", "Electronics"],
     price: 300000,
     rating: { count: 500, average: 4.6 },
-    images: ["/images/pic15.jpeg"],
+    images: ["/images/pic1.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -180,7 +180,7 @@ const products = [
     tags: ["New Arrivals", "Electronics"],
     price: 25000,
     rating: { count: 800, average: 4.5 },
-    images: ["/images/pic16.jpeg"],
+    images: ["/images/pic2.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -189,7 +189,7 @@ const products = [
     tags: ["New Arrivals", "Electronics"],
     price: 150000,
     rating: { count: 100, average: 4.5 },
-    images: ["/images/pic17.jpeg"],
+    images: ["/images/pic3.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -198,7 +198,7 @@ const products = [
     tags: ["New Arrivals", "Electronics"],
     price: 50000,
     rating: { count: 2000, average: 4.8 },
-    images: ["/images/pic18.jpeg"],
+    images: ["/images/pic4.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -207,7 +207,7 @@ const products = [
     tags: ["New Arrivals", "Accessories"],
     price: 35000,
     rating: { count: 300, average: 4.6 },
-    images: ["/images/pic19.jpeg"],
+    images: ["/images/pic5.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -216,7 +216,7 @@ const products = [
     tags: ["New Arrivals", "Electronics"],
     price: 120000,
     rating: { count: 150, average: 4.7 },
-    images: ["/images/pic20.jpeg"],
+    images: ["/images/pic6.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -225,7 +225,7 @@ const products = [
     tags: ["New Arrivals", "Shoe"],
     price: 90000,
     rating: { count: 400, average: 4.4 },
-    images: ["/images/pic21.jpeg"],
+    images: ["/images/pic1.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -234,7 +234,7 @@ const products = [
     tags: ["New Arrivals", "Shoe"],
     price: 60000,
     rating: { count: 250, average: 4.3 },
-    images: ["/images/pic22.jpeg"],
+    images: ["/images/pic2.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -243,7 +243,7 @@ const products = [
     tags: ["New Arrivals", "Electronics"],
     price: 25000,
     rating: { count: 100, average: 4.6 },
-    images: ["/images/pic23.jpeg"],
+    images: ["/images/pic3.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -252,7 +252,7 @@ const products = [
     tags: ["New Arrivals", "Electronics"],
     price: 45000,
     rating: { count: 80, average: 4.2 },
-    images: ["/images/pic24.jpeg"],
+    images: ["/images/pic4.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -261,7 +261,7 @@ const products = [
     tags: ["New Arrivals", "Electronics"],
     price: 15000,
     rating: { count: 500, average: 4.5 },
-    images: ["/images/pic25.jpeg"],
+    images: ["/images/pic5.jpeg"],
     colors: generateColorOptions(2, 5),
   },
   {
@@ -270,7 +270,7 @@ const products = [
     tags: ["New Arrivals", "Accessories"],
     price: 20000,
     rating: { count: 200, average: 4.3 },
-    images: ["/images/pic26.jpeg"],
+    images: ["/images/pic6.jpeg"],
     colors: generateColorOptions(2, 5),
   },
 ];
