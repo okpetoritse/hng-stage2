@@ -92,7 +92,7 @@
 
 .headerNav--count {
   position: absolute;
-  top: -14px;
+  top: -10px;
   right: -10px;
   display: flex;
   align-items: center;
@@ -100,7 +100,7 @@
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background: #dc1f21;
+  background: #aa4a41;
 
   color: #fdfefb;
   font-size: 0.6rem;
@@ -110,7 +110,7 @@
 .headerNav--item.active .headerNav--count {
   top: 0;
   right: -5px;
-  background: #aa4a41;
+  
 }
 
 @media screen and (max-width: 768px) {
