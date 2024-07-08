@@ -60,7 +60,6 @@ const ProductDetailPage = () => {
     removeFavorite(parseInt(id));
   };
 
-  console.log("In cart: ", cart, inCart);
   return (
     <main className="productDetailMain container">
       <Breadcrumb data={["Product List", "Female Shoe", "Product details"]} />
@@ -149,27 +148,12 @@ const ProductDetailPage = () => {
       <aside className="recentlyViewed">
         <h3 className="recentlyViewed--title">Recently Viewed Product</h3>
         <div className="productList--recently">
-          <ProductCard
-            title="Product Name"
-            tags={["Tag 1", "Tag 2"]}
-            price={70000}
-            rating={{ average: 5, count: 227 }}
-            images={["/images/pic1.jpeg"]}
-          />
-          <ProductCard
-            title="Product Name"
-            tags={["Tag 1", "Tag 2"]}
-            price={70000}
-            rating={{ average: 5, count: 227 }}
-            images={["/images/pic2.jpeg"]}
-          />
-          <ProductCard
-            title="Product Name"
-            tags={["Tag 1", "Tag 2"]}
-            price={70000}
-            rating={{ average: 5, count: 227 }}
-            images={["/images/pic3.jpeg"]}
-          />
+          {products
+            .filter((product) => product.id !== parseInt(id))
+            .slice(0, 3)
+            .map((product) => (
+              <ProductCard {...product} />
+            ))}
         </div>
       </aside>
     </main>

@@ -2,7 +2,7 @@ import LogoIcon from "@/assets/icons/logo.svg?react";
 import SearchIcon from "@/assets/icons/search.svg?react";
 import FavouriteIcon from "@/assets/icons/favourite.svg?react";
 import CartIcon from "@/assets/icons/cart.svg?react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import CartContext from "../contexts/CartContext";
 import FavoritesContext from "../contexts/FavoritesContext";
@@ -12,10 +12,14 @@ const Header = () => {
   return (
     <div className="wrapper">
       <header className="header container">
-        <Link className="logo">
+        <NavLink
+          to="/"
+          className="logo"
+          activeClassName="active"
+        >
           <LogoIcon />
           <p className="logo--title">Timbu Cloud Shop</p>
-        </Link>
+        </NavLink>
         <section className="headerSearch">
           <SearchIcon className="headerSearch--icon" />
           <input
@@ -32,15 +36,16 @@ const Header = () => {
                 <div className="headerNav--count">{favorites.length}</div>
               ) : null}
             </li>
-            <Link
+            <NavLink
               to="/cart"
               className="headerNav--item"
+              activeClassName="active"
             >
               <CartIcon className="headerNav--cart" />
               {cart.length > 0 ? (
                 <div className="headerNav--count">{cart.length}</div>
               ) : null}
-            </Link>
+            </NavLink>
             <li className="headerNav--item">
               <img
                 src="/images/avatar.png"

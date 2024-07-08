@@ -66,6 +66,19 @@
 .headerNav--item {
   position: relative;
 }
+
+.headerNav--item.active {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+  gap: 9px;
+  border-radius: 8px;
+  background: #ffe2df;
+}
+
+.headerNav--item.active svg {
+  color: #aa4a41;
+}
 .headerNav--avatar {
   width: 50px;
   height: auto;
@@ -92,6 +105,12 @@
   color: #fdfefb;
   font-size: 0.6rem;
   font-weight: 700;
+}
+
+.headerNav--item.active .headerNav--count {
+  top: 0;
+  right: -5px;
+  background: #aa4a41;
 }
 
 @media screen and (max-width: 768px) {

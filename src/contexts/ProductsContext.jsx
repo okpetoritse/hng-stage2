@@ -1,5 +1,5 @@
-import React, { createContext, useState, useEffect } from 'react';
-import dummyProducts from '../data/products'; // Adjust the path as necessary
+import React, { createContext, useState, useEffect } from "react";
+import { products } from "@/data/products"; // Adjust the path as necessary
 
 const ProductsContext = createContext();
 
@@ -8,7 +8,7 @@ export const ProductsProvider = ({ children }) => {
 
   useEffect(() => {
     // Simulate fetching data
-    setProducts(dummyProducts);
+    setProducts(products);
   }, []);
 
   return (
