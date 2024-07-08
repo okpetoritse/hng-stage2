@@ -9,7 +9,7 @@ const formatPrice = (price) => {
     }
 
     // Join the parts with commas and return the formatted price
-    return `₦${parts.join(',')}`;
+    return `₦${parts.join(',')}.00`;
   };
 
 
