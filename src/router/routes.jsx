@@ -4,6 +4,7 @@ import MainLayout from "@/layouts/MainLayout";
 import CartPage from "@/pages/CartPage";
 import CheckoutPage from "@/pages/CheckoutPage";
 import CheckoutSuccessPage from "@/pages/CheckoutSuccessPage";
+import FavouritePage from "@/pages/FavouritePage";
 
 const routes = [
   {
@@ -28,7 +29,11 @@ const routes = [
       {
         path: "/success",
         element: <CheckoutSuccessPage />,
-      }
+      },
+      {
+        path: "/favourites",
+        element: <FavouritePage />,
+      },
     ],
   },
 ];

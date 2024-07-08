@@ -30,7 +30,10 @@ const CartPage = () => {
             <ul className="cartProduct--list">
               {cart.length > 0 &&
                 cart.map((product) => (
-                  <li className="cartProduct--item">
+                  <li
+                    className="cartProduct--item"
+                    key={product.id}
+                  >
                     <div className="cartProductItem--info">
                       <img
                         className="cartProductItem--img"

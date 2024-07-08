@@ -1,13 +1,14 @@
 import "@/styles/Checkout.css";
 import Breadcrumb from "@/components/Breadcrumb";
 import { formatPrice } from "@/utils/product";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useMemo, useState } from "react";
 import CartContext from "@/contexts/CartContext";
 import Checkbox from "@/components/Checkbox";
 
 const CheckoutPage = () => {
-  const { cart } = useContext(CartContext);
+  const navigate = useNavigate();
+  const { cart, clearCart } = useContext(CartContext);
   const cartSubTotal = useMemo(() => {
     return cart.reduce((acc, product) => acc + product.price, 0);
   }, [cart]);
@@ -15,6 +16,17 @@ const CheckoutPage = () => {
   const [paymentMethod, setPaymentMethod] = useState("");
 
   const shippingFee = 4980;
+
+  const handleConfirmPayment = () => {
+    clearCart();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setTimeout(() => {
+      navigate("/success");
+    }, 500);
+  };
   return (
     <main>
       <Breadcrumb data={["Product List"]} />
@@ -128,7 +140,10 @@ const CheckoutPage = () => {
           <ul className="checkout--orderList">
             {cart &&
               cart.map((product) => (
-                <li className="cartProduct--item checkout--orderItem">
+                <li
+                  className="cartProduct--item checkout--orderItem"
+                  key={product.id}
+                >
                   <div className="cartProductItem--info">
                     <img
                       className="cartProductItem--img"
@@ -162,12 +177,12 @@ const CheckoutPage = () => {
                 {formatPrice(shippingFee + cartSubTotal)}
               </p>
             </div>
-            <Link
-              to="/success"
+            <button
+              onClick={handleConfirmPayment}
               className="cartProducts--checkout"
             >
               Confirm Payment
-            </Link>
+            </button>
           </section>
         </section>
       </div>

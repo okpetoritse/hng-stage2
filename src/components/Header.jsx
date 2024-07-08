@@ -29,12 +29,12 @@ const Header = () => {
         </section>
         <nav>
           <ul className="headerNav">
-            <li className="headerNav--item">
+            <NavLink  to="/favourites" className="headerNav--item">
               <FavouriteIcon />
               {favorites.length > 0 ? (
                 <div className="headerNav--count">{favorites.length}</div>
               ) : null}
-            </li>
+            </NavLink>
             <NavLink
               to="/cart"
               className="headerNav--item"
