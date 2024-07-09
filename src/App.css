@@ -106,7 +106,6 @@
   font-weight: 700;
 }
 
-
 @media screen and (max-width: 768px) {
   .header {
     display: grid;
@@ -121,6 +120,10 @@
 
   .headerSearch--input {
     min-width: 100%;
+  }
+
+  .headerNav {
+    gap: 8px;
   }
 }
 
