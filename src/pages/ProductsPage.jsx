@@ -20,7 +20,7 @@ const ProductPage = () => {
     const offset = (selected * perPage) % products.length;
     setItemOffset(offset);
     window.scrollTo({
-      top: 0,
+      top: 250,
       behavior: "smooth",
     });
   };

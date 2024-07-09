@@ -26,7 +26,7 @@ const FavouritePage = () => {
   };
 
   const currentProducts = favorites.slice(itemOffset, endOffset);
-  console.log("WatchListPage -> favorites", favorites);
+
   return (
     <>
       <main className="productMain">

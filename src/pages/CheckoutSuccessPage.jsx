@@ -1,6 +1,9 @@
 import "@/styles/CheckoutSuccess.css";
 import MarkLargeIcon from "@/assets/icons/mark-large.svg?react";
 import { Link } from "react-router-dom";
+import confetti from "canvas-confetti";
+import { useEffect } from "react"
+
 
 const CheckoutSuccessPage = () => {
   const formatDate = (date) => {
@@ -15,6 +18,15 @@ const CheckoutSuccessPage = () => {
 
     return date.toLocaleString("en-US", options);
   };
+
+  useEffect(()=> {
+    confetti({
+      particleCount: 300,
+      spread: 80,
+      origin: { y: 0.8 },
+    
+    })
+  }, [])
 
   return (
     <main className="checkoutSuccess container">

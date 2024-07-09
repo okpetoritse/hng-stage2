@@ -3,7 +3,7 @@ import FavouriteFilledIcon from "@/assets/icons/favourite-filled.svg?react";
 import FavoritesContext from "@/contexts/FavoritesContext";
 import { formatPrice } from "../utils/product";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 
 const ProductCard = ({ id, title, tags, price, images }) => {
   const { addFavorite, removeFavorite, favorites } =
@@ -11,10 +11,22 @@ const ProductCard = ({ id, title, tags, price, images }) => {
 
   const formattedPrice = formatPrice(price);
 
+  const productCardRef = useRef(null);
+
   const handleAddFavorite = (e) => {
     e.preventDefault();
     e.stopPropagation();
     addFavorite({ id, title, tags, price, images });
+    setTimeout(() => {
+      const favouriteIcon = productCardRef.current.querySelector(
+        ".productCard--favourite"
+      );
+      favouriteIcon.classList.add("filled");
+    }, 100);
+
+    // setTimeout(() => {
+    //   favouriteFilledRef.current.classList.remove("filled");
+    // }, 3000);
   };
 
   const handleRemoveFavorite = (e) => {
@@ -28,6 +40,7 @@ const ProductCard = ({ id, title, tags, price, images }) => {
     <Link
       to={`/product/${id}`}
       className="productCard"
+      ref={productCardRef}
     >
       <div className="productCard--img">
         <img
@@ -36,7 +49,7 @@ const ProductCard = ({ id, title, tags, price, images }) => {
         />
         {favorites.some((product) => product.id === id) ? (
           <FavouriteFilledIcon
-            className="productCard--favourite filled"
+            className="productCard--favourite"
             onClick={handleRemoveFavorite}
           />
         ) : (

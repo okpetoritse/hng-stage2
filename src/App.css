@@ -129,6 +129,8 @@
   .logo--title {
     font-size: 0.875rem;
   }
+
+
 }
 
 /* Footer */
@@ -323,6 +325,12 @@
   gap: 16px;
   background: #fdfefb;
   border-radius: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.productCard:hover {
+  transform: scale(1.04);
+
 }
 
 .productCard:nth-child(2),
@@ -332,7 +340,7 @@
 
 .productList .productCard:nth-child(2) .productCard--img img,
 .productList .productCard:nth-child(6) .productCard--img img {
-  height: 625px;
+  height: 623px;
   width: 400px;
 }
 
@@ -375,13 +383,13 @@
   50%,
   70%,
   90% {
-    transform: rotate(5deg) translateX(5px);
+    transform: rotate(5deg) translateX(2px);
   }
   20%,
   40%,
   60%,
   80% {
-    transform: rotate(-5deg) translateX(-5px);
+    transform: rotate(-5deg) translateX(-2px);
   }
 }
 
