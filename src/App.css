@@ -125,6 +125,10 @@
   .headerNav {
     gap: 8px;
   }
+
+  .logo--title {
+    font-size: 0.875rem;
+  }
 }
 
 /* Footer */
@@ -355,6 +359,30 @@
 .productCard--favourite:hover {
   transform: scale(1.1);
   color: #dc1f21;
+}
+
+.productCard--favourite.filled {
+  animation: twisterShake 1s;
+}
+
+@keyframes twisterShake {
+  0%,
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: rotate(5deg) translateX(5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: rotate(-5deg) translateX(-5px);
+  }
 }
 
 .productCard--desc {

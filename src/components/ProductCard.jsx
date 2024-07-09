@@ -36,7 +36,7 @@ const ProductCard = ({ id, title, tags, price, images }) => {
         />
         {favorites.some((product) => product.id === id) ? (
           <FavouriteFilledIcon
-            className="productCard--favourite"
+            className="productCard--favourite filled"
             onClick={handleRemoveFavorite}
           />
         ) : (
